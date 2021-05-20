@@ -26,7 +26,7 @@ sass:
 collections:
   notes:
     output: true
-    permalink: /:slug
+    permalink: :slug
 
 defaults:
   - scope:
