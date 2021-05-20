@@ -14,7 +14,7 @@ use_html_extension:  true
 # set to `false` to open non-internal links in current tab.
 open_external_links_in_new_tab: true
 
-# permalink:           pretty
+permalink:           pretty
 
 plugins:
   - jekyll-last-modified-at
@@ -26,7 +26,7 @@ sass:
 collections:
   notes:
     output: true
-    permalink: :slug
+    permalink: /:slug
 
 defaults:
   - scope:
