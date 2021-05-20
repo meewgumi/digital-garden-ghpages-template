@@ -34,9 +34,7 @@
   }
 </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"
-  integrity="sha512-FHsFVKQ/T1KWJDGSbrUhTJyS1ph3eRrxI228ND0EGaEp6v4a/vGwPWd3Dtd/+9cI7ccofZvl/wulICEurHN1pg=="
-  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" integrity="sha512-FHsFVKQ/T1KWJDGSbrUhTJyS1ph3eRrxI228ND0EGaEp6v4a/vGwPWd3Dtd/+9cI7ccofZvl/wulICEurHN1pg==" crossorigin="anonymous"></script>
 
 <div id="graph-wrapper">
   <script>
@@ -49,7 +47,9 @@
     const FONT_BASELINE = 40;
     const MAX_LABEL_LENGTH = 50;
 
-    const graphData = {% include notes_graph.json %}
+    const graphData = {
+      % include notes_graph.json %
+    }
     let nodesData = graphData.nodes;
     let linksData = graphData.edges;
 
@@ -61,7 +61,7 @@
           3 *
           Math.sqrt(
             linksData.filter((l) => l.source === el.id || l.target === el.id)
-              .length + 1
+            .length + 1
           );
         if (weight < MINIMAL_NODE_SIZE) {
           weight = MINIMAL_NODE_SIZE;
@@ -76,7 +76,7 @@
       window.location = d.path
     };
 
-    const onMouseover = function (d) {
+    const onMouseover = function(d) {
       const relatedNodesSet = new Set();
       linksData
         .filter((n) => n.target.id == d.id || n.source.id == d.id)
@@ -113,7 +113,7 @@
       });
     };
 
-    const onMouseout = function (d) {
+    const onMouseout = function(d) {
       node.attr("class", "");
       link.attr("class", "");
       text.attr("class", "");
@@ -185,9 +185,9 @@
       .force(
         "link",
         d3
-          .forceLink(linksData)
-          .id((d) => d.id)
-          .distance(70)
+        .forceLink(linksData)
+        .id((d) => d.id)
+        .distance(70)
       )
       .force("center", d3.forceCenter(width / 2, height / 2))
       .force("collision", d3.forceCollide().radius(80))
