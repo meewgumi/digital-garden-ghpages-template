@@ -1,4 +1,5 @@
 # Digital garden Jekyll template
+**When using with GH Pages, you must build `_site` on your local machine, then sync static files to Github afterward. [[Reference](https://github.com/jekyll/jekyll/blob/master/docs/_docs/plugins/installation.md)]
 
 - For Github Pages
 - Added repo name to `_config.yml`
