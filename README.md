@@ -5,6 +5,7 @@
 - Added repo name to `_config.yml`
 - Updated `notes-graph` name because of ghpages symlink error
 - Removing extra Netlify stuff
+- Permalinks are broken if you use a subdirectory. Only recommended for apex domains and subdomains.
 
 ## Source
 Forked from this repo:
