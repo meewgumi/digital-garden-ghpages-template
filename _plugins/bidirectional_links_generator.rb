@@ -20,7 +20,7 @@ class BidirectionalLinksGenerator < Jekyll::Generator
           File.extname(note_potentially_linked_to.basename)
         ).gsub('_', ' ').gsub('-', ' ').capitalize
 
-        new_href = "#{site.baseurl}#{note_potentially_linked_to.url}#{link_extension}"
+        new_href = "#{note_potentially_linked_to.url}#{link_extension}"
         anchor_tag = "<a class='internal-link' href='#{new_href}'>\\1</a>"
 
         # Replace double-bracketed links with label using note title
@@ -76,7 +76,7 @@ class BidirectionalLinksGenerator < Jekyll::Generator
       # Nodes: Graph
       graph_nodes << {
         id: note_id_from_note(current_note),
-        path: "#{site.baseurl}#{current_note.url}#{link_extension}",
+        path: "#{current_note.url}#{link_extension}",
         label: current_note.data['title'],
       } unless current_note.path.include?('_notes/index.html')
 
