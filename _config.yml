@@ -1,5 +1,10 @@
 title:               My digital garden
-baseurl:             'https://meewgumi.github.io/digital-garden-ghpages-template/'
+
+# Change url to your root domain or subdomain including https://. No slashes.
+url:                 'https://meewgumi.github.io'
+
+# Change baseurl to the directory your site lives at so internal link generator creates proper relative paths. No slashes.
+baseurl:             'digital-garden-ghpages-template'
 
 include:             ['_pages']
 exclude:             ['_includes/notes_graph.json']
