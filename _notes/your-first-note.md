@@ -4,7 +4,7 @@ title: Your first seed
 
 ### Welcome!
 
-This is your first note. You'll find it in the [`notes/`](https://github.com/maximevaillancourt/digital-garden-jekyll-template/tree/master/_notes) directory. 
+This is your first note. You'll find it in the [`notes/`](https://github.com/maximevaillancourt/digital-garden-jekyll-template/tree/master/_notes) directory.
 
 ### Link syntax
 
@@ -61,7 +61,7 @@ If you'd like to quote other people, consider using quote blocks:
 
 And of course, images look great:
 
-<img src="/assets/image.jpg"/>
+<img src="assets/image.jpg">
 
 ### Code syntax highlighting
 
@@ -95,5 +95,3 @@ The easiest way to build your own digital garden based on this template is to re
 Go forth, have fun, and learn new something every day! ✌️
 
 ### Footnotes
-
-
