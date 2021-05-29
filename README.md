@@ -1,11 +1,12 @@
 # Digital garden Jekyll template
-**When using with GH Pages, you must build `_site` on your local machine, then sync static files to Github afterward. [[Reference](https://github.com/jekyll/jekyll/blob/master/docs/_docs/plugins/installation.md)]**
+**When using with GH Pages, you must bundle site on your local machine, then sync all files to Github afterward. [[Reference](https://github.com/jekyll/jekyll/blob/master/docs/_docs/plugins/installation.md)]**
 
 - For Github Pages
-- Added repo name to `_config.yml`
+- Put full site url in `_config.yml`
 - Updated `notes-graph` name because of ghpages symlink error
 - Removing extra Netlify stuff
-- Permalinks are broken if you use a subdirectory. Only recommended for apex domains and subdomains.
+- Set Github Pages build branch to `docs` directory in Settings
+- Before publishing content, run `bundle` and `bundle exec jekyll serve` on your local machine
 
 ## Source
 Forked from this repo:
